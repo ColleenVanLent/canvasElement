@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #myCanvas{
+        border: 5px solid black;
+        }
+        </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="600">
+</canvas>
+
+<script>
+    var canvas = document.querySelector("#myCanvas");
+    var ctx = canvas.getContext("2d"); 
+    ctx.fillStyle = "red";
+    draw(50,50);
+
+    function draw (x,y) {
+        //use x and y below
+        console.log("I'M GONNA DRAW")
+        //this always draws in position 50,50
+        ctx.arc(50,50,10,0,2 * Math.PI);
+        ctx.fill();
+    }
+
+    myCanvas.addEventListener(
+        'mousemove', function (e){
+            console.log(e); 
+            // What should I do when I 
+            // move the mouse?
+            // What information do I need from e?
+
+        })
+    window.addEventListener(
+        'keydown',function(e){
+            console.log(e)
+            // What should I do when I 
+            // press a key?
+            // What information do I need from e?
+        })
+</script>
+</body>
+
